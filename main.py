@@ -55,6 +55,7 @@ def calculate_points(data: ProcessedReceipt):
     alphanumeric = 'abcdefghijklmnopqrstuvwxyz1234567890'
 
     # One point for every alphanumeric character in the retailer name
+    # Assuming all occurences are counted, and not unique occurences
     for char in data.retailer:
         if char.lower() in alphanumeric:
             points += 1
